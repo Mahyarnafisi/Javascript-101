@@ -48,4 +48,13 @@ const BoardPassenger = function (n, wait) {
 };
 
 BoardPassenger(180, 3);
-// -----------------------------------------------------------------
+// Closure with IIFE example--------------------------------------------------------------
+
+(function () {
+  const header = document.querySelector("h1");
+  header.style.color = "green";
+
+  document.querySelector("body").addEventListener("click", function () {
+    header.style.color = "red";
+  });
+})();

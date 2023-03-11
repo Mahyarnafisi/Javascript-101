@@ -1,0 +1,51 @@
+// Closure---------------------first type---------------------------
+const clickCountUp = function () {
+  let numberValue = 10;
+  return function () {
+    numberValue--;
+    console.log(`${numberValue} passenger`);
+  };
+};
+
+const clicked = clickCountUp();
+clicked();
+clicked();
+
+// Closure-------------------second type----------------------------
+let f;
+const g = function () {
+  const a = 23;
+  f = function () {
+    console.log(a * 2);
+  };
+};
+
+const h = function () {
+  const b = 100;
+  f = function () {
+    console.log(b * 2);
+  };
+};
+
+g();
+f();
+
+h();
+f();
+
+console.dir(f);
+
+// Closure -----------------------third type--------------------
+const BoardPassenger = function (n, wait) {
+  const perGroup = n / 3;
+  setTimeout(function () {
+    console.log(`we are boarding all ${n} passenger.`);
+    setTimeout(function () {
+      console.log(`There are 3 groups, each ${perGroup}`);
+    }, wait * 1000);
+  }, wait * 1000);
+  console.log(`Boarding start in ${wait} second, thanks`);
+};
+
+BoardPassenger(180, 3);
+// -----------------------------------------------------------------

@@ -45,3 +45,16 @@ console.log(arrMerge);
 
 const arrJoin = arrCon.join("-");
 console.log(arrJoin);
+
+
+// !NEW "AT" method  "Does Not " mutate original array---and can be use on string too ------------------------------------------------------------------
+// get the last value in array
+const names = ["ali", "sara", "james", "canvas"];
+
+console.log(names[names.length - 1]);
+console.log(names.slice(-1)[0]);
+console.log(names.at(-1));
+
+// work on string
+
+console.log("mahyar".at(-1));

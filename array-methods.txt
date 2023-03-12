@@ -1,0 +1,47 @@
+"use strict";
+//! -----------------------------------------------//
+//! Slice ----- "DOES NOT" mutate original array -----------------------------------------------------------------
+let arr = ["a", "b", "c", "d", "e"];
+const result = arr.slice(1);
+console.log(result);
+// -------------------------------------------------
+//  Shallow copy of array----------
+const arrCopyA = [...arr];
+const arrCopyB = arr.slice();
+console.log(arrCopyA);
+console.log(arrCopyB);
+// ------------------------------
+
+//! splice-----"DOES" mutate original array ----------------------------------------------------------------
+// different between "slice" and "splice" is extracted value will be gone and original array will change.
+
+// const spliceArr = arr.splice(2);
+// console.log(spliceArr);
+// and now you can see the original array has been changed
+console.log(arr);
+
+// splice method to delete the last value in array
+const removeTheLast = arr.splice(-1);
+console.log(arr);
+
+//! Reverse------"DOES" mutate original array ----------------------------------------------------------------
+arr = ["a", "b", "c", "d", "e"];
+const arr2 = ["j", "a", "b", "a", "h", "k", "s"];
+
+const arrRvs = arr.reverse();
+console.log(arrRvs);
+
+console.log(arr);
+
+//! Concat -----"DOES NOT"mutate original array ----------------------------------------------------------------
+
+const arrCon = arr.concat(arr2);
+console.log(arrCon);
+// or
+const arrMerge = [...arr, ...arr2];
+console.log(arrMerge);
+
+// !Join ----- "DOES NOT" Mutate original array ----and change the result to a "STRING"-------------------------
+
+const arrJoin = arrCon.join("-");
+console.log(arrJoin);

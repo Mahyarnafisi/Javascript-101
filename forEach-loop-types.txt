@@ -1,0 +1,36 @@
+// ForEach Loop on Array
+const movements = [442, 456, 2000, -677, -2230, 100];
+
+Function parameters in "forEach" loops contains of : 1st=content index, 2nd= number index , 3rd= entire array//
+
+movements.forEach(function (mov, i, arr) {
+  if (mov > 0) {
+    console.log(`transition ${i + 1}: You have deposited ${mov}`);
+  } else {
+    console.log(`transition ${i + 1}: You have withdrew ${Math.abs(mov)} ...`);
+    setTimeout(function () {
+      console.log(`Here are you list of transition: \n ${arr}`);
+    }, 2000);
+  }
+});
+
+
+// ForEach loop on Map ---------------------------
+console.log(`---------ForEach loop on MAP------------`);
+const newMap = new Map([
+  ["Mahyar", "Nafisi"],
+  ["farnoosh", "soleimanigharbi"],
+  ["kazem", "kazemi"],
+]);
+
+newMap.forEach(function (value, key, map) {
+  console.log(`${key}: ${value}`);
+});
+
+// FOrEach Loop on set ------------------------------
+console.log(`---------ForEach loop on MAP------------`);
+
+const newSet = new Set(["mahyar", "nafisi", "farnoosh", "mahyar"]);
+newSet.forEach(function (value, key, set) {
+  console.log(`${key}: ${value}`);
+});

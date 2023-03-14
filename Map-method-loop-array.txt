@@ -1,0 +1,13 @@
+// MAP method on array --------------------
+// map make new array ---------------------
+
+const discountRate = 0.7;
+const newPrice = account1.movements.map(function (mov) {
+  return (mov * discountRate).toFixed(2) / 1;
+});
+console.log(newPrice);
+
+// map in arrow format--------------------
+const discountRate = 0.6;
+const newPrices = account1.movements.map((mov) => Number((mov * discountRate).toFixed(1)));
+console.log(newPrices);

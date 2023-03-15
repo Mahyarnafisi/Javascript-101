@@ -1,0 +1,14 @@
+const createUsername = function (accs) {
+  accs.forEach(function (acc) {
+    acc.password = acc.owner  -------------------> create new ley and index element in "acc" as password key index
+      .toLowerCase() ----------------------------> turn all to lower case
+      .split(" ") -------------------------------> split two word with using space between
+      .map((name) => name[0]) -------------------> map loop over array ( first name and second) and choose the first both letter
+      .join(""); --------------------------------> than join both word in to a word for example (mahyar nafisi) to (mn)
+  });
+};
+
+createUsername(accounts); -----------------------> accounts is a object with owner name property : const accounts = {
+                                                                                                         owner: "mahyar nafisi",
+                                                                                                         movements: [245, 475, 1122, -500, 359],
+                                                                                                                                       }

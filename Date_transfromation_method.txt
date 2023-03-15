@@ -1,0 +1,23 @@
+const calcAverageHumanAge = function (ages) {
+  const humanAge = ages.map((age) => (age <= 2 ? 2 * age : 16 + age * 4));
+
+  const adult = humanAge.filter(function (age) {
+    return age >= 18;
+  });
+
+  const average = adult.reduce((acc, curr, i, arr) => acc + curr / arr.length);
+  console.log(average);
+  return average;
+};
+
+const test1 = calcAverageHumanAge([4, 23, 2, 7, 11, 12, 3]);
+const test2 = calcAverageHumanAge([4, 2, 15, 26, 2, 8, 12]);
+console.log(test1, test2);
+
+
+
+hamun age: is map(loop) method
+adult: is filter method 
+average: is reduce method 
+
+

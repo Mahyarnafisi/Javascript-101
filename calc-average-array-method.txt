@@ -1,0 +1,5 @@
+const calcAverageHumanAge = (ages) =>
+  ages.reduce((acc, curr, i, arr) => acc + curr / arr.length, 0).toFixed(2);
+
+const testData = calcAverageHumanAge([5, 2, 4, 1, 11, 2]);
+console.log(testData);

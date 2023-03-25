@@ -1,0 +1,15 @@
+const number = document.querySelectorAll('.animi');
+const speed = 30;
+number.forEach(number => {
+  const updateCounter = () => {
+    const target = parseInt(number.getAttribute('data-target'));
+    const count = parseInt(number.innerText);
+    const increment = Math.trunc(target / speed);
+
+    if (count < target) {
+      number.innerText = count + increment;
+      setTimeout(updateCounter, 100);
+    } else number.innerText = target;
+  };
+  updateCounter();
+});

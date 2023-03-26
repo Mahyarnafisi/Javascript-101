@@ -1,0 +1,11 @@
+const hover1 = function (e) {
+  h1.style.transform = 'translateY(-3px)';
+  h1.style.transition = 'all 1s';
+  setTimeout(() => {
+    h1.style.transform = 'translateY(6px)';
+  }, 500);
+  h1.removeEventListener('mouseenter', hover1);
+};
+
+h1.addEventListener('mouseenter', hover1);
+h1.addEventListener('mouseenter', hover1);

@@ -1,0 +1,32 @@
+// OOP
+// Constructor Function with New Operator to create new object------------//
+
+const Person = function (firstName, lastName) {
+  this.name = firstName;
+  this.family = lastName;
+};
+
+const detail = new Person("mahyar", "nafisi");
+
+// 1.New {} is created
+// 2.function called with , this = {}
+// 3.{} Linked to Prototype
+// 4. function automatically retune {}
+
+// now can create as many you want with construction function
+
+const detail2 = new Person("jack", "salehi");
+console.log(detail2) 
+//-- Person (name:"jack", family:"salehi"
+
+const detail3 = new Person("mitra", "salavaty");
+console.log(detail3)
+//-- Person (name:"mitra", family:"salavaty")
+
+console.log(detail, detail2, detail3);
+Person(name:"mahyar", family:"nafisi")
+Person(name:"jack", family:"salehi")
+Person(name:"mitra", family:"salavaty")
+// ___________________________________________________//
+
+

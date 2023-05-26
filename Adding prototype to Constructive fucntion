@@ -1,0 +1,25 @@
+const mahyar = new Person("mahyar", 1987);
+const jack = new Person("jack", 1992);
+const mitra = new Person("mitra", 2002);
+
+// Prototype
+// 
+// adding prototype to constructive function 
+
+Person.prototype.calcAge = function () {
+  console.log(2023 - this.birthYear);
+};
+
+// calling object with newly prototype
+
+mahyar.calcAge(); //--36
+jack.calcAge(); //--31
+mitra.calcAge(); //21
+
+
+//adding method in object prototype
+
+Person.prototype.placeOfBirth = "Shiraz";
+console.log(mahyar.placeOfBirth);
+console.log(jack.placeOfBirth);
+console.log(mitra.placeOfBirth);

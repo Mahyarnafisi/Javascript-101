@@ -1,0 +1,22 @@
+class PersonCl {
+  // constricted the object
+  constructor(name, age) {
+    this.name = [name.charAt(0).toUpperCase() + name.slice(1)];
+    this.age = [age.toString()];
+  }
+  // Method prototype
+  ageSentence() {
+    console.log(`${this.name} is ${this.age} years old.`);
+  }
+}
+
+//input data stored in diffrent variable
+
+const person1 = new PersonCl("ali", 39);
+const person2 = new PersonCl("mahyar", 36);
+const person3 = new PersonCl("ghazal", 30);
+
+// calling the function
+person1.ageSentence();
+person2.ageSentence();
+person3.ageSentence();
